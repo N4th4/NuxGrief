@@ -19,6 +19,9 @@ public class NGPlayerListener extends PlayerListener {
     }
     
     public void onPlayerInteract(PlayerInteractEvent event) {
+    	if (event.getClickedBlock() == null) {
+    		return;
+    	}
     	if (event.getClickedBlock().getType() == Material.CHEST && !plugin.permissions.has(event.getPlayer(), "nuxgrief.interact.chests")) {
     		event.setCancelled(true);
     	}
