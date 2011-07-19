@@ -31,6 +31,5 @@ public class NGPlayerListener extends PlayerListener {
     	else if (event.getClickedBlock().getType() == Material.STORAGE_MINECART && !plugin.permissions.has(event.getPlayer(), "nuxgrief.interact.storage_minecarts")) {
     		event.setCancelled(true);
     	}
-    	
     }
 }

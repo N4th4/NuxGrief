@@ -18,5 +18,7 @@ Permissions' nodes
 * nuxgrief.interact.chests
 * nuxgrief.interact.furnaces
 * nuxgrief.interact.storage_minecarts
+* nuxgrief.gettargeted
+* nuxgrief.damage
 
 (If somebody has the nuxgrief.pickup node, he can pick up items. If somebody has ...)

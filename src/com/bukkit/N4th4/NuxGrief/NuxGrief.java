@@ -16,7 +16,8 @@ import com.nijikokun.bukkit.Permissions.Permissions;
 public class NuxGrief extends JavaPlugin {
     private final HashMap<Player, Boolean>    debugees       = new HashMap<Player, Boolean>();
     private final NGPlayerListener            playerListener = new NGPlayerListener(this);
-    public PermissionHandler                 permissions    = null;
+    private final NGEntityListener            entityListener = new NGEntityListener(this);
+    public PermissionHandler                  permissions    = null;
 
     public NuxGrief() {
         NGLogger.initialize();
@@ -28,6 +29,8 @@ public class NuxGrief extends JavaPlugin {
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvent(Event.Type.PLAYER_PICKUP_ITEM , playerListener, Priority.Normal, this);
         pm.registerEvent(Event.Type.PLAYER_INTERACT , playerListener, Priority.Normal, this);
+        pm.registerEvent(Event.Type.ENTITY_TARGET , entityListener, Priority.Normal, this);
+        pm.registerEvent(Event.Type.ENTITY_DAMAGE , entityListener, Priority.Normal, this);
 
         PluginDescriptionFile pdfFile = this.getDescription();
         NGLogger.info(pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");
