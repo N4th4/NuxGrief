@@ -1,4 +1,4 @@
-package com.bukkit.N4th4.NuxGrief;
+package net.n4th4.bukkit.nuxgrief;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -15,17 +15,17 @@ public class NGEntityListener extends EntityListener {
 
     public void onEntityTarget(EntityTargetEvent event) {
         if (event.getTarget() instanceof Player) {
-            if (!plugin.permissions.has((Player) event.getTarget(), "nuxgrief.gettargeted")) {
+            if (!((Player) event.getTarget()).hasPermission("nuxgrief.gettargeted")) {
                 event.setCancelled(true);
             }
         }
     }
-    
+
     public void onEntityDamage(EntityDamageEvent event) {
         if (event instanceof EntityDamageByEntityEvent) {
             EntityDamageByEntityEvent event2 = (EntityDamageByEntityEvent) event;
             if (event2.getDamager() instanceof Player) {
-                if (!plugin.permissions.has((Player) event2.getDamager(), "nuxgrief.damage")) {
+                if (!((Player) event2.getDamager()).hasPermission("nuxgrief.damage")) {
                     event.setCancelled(true);
                 }
             }

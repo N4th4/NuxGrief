@@ -1,3 +1,33 @@
 name: NuxGrief
-main: com.bukkit.N4th4.NuxGrief.NuxGrief
-version: 1.1
+version: 1.2
+author: N4th4
+main: net.n4th4.bukkit.nuxgrief.NuxGrief
+
+permissions:
+    nuxgrief.*:
+        description: Let the player do anything he wants
+        children:
+            nuxgrief.gettargeted: true
+            nuxgrief.pickup: true
+            nuxgrief.interact.*: true
+    nuxgrief.interact.*:
+        description: Let the player open anything he wants
+        children:
+            nuxgrief.interact.chests: true
+            nuxgrief.interact.furnaces: true
+            nuxgrief.interact.storage_minecarts: true
+    nuxgrief.gettargeted:
+        description: Let the player be targeted by a mob
+        default: op
+    nuxgrief.pickup:
+        description: Let the player pick up items
+        default: op
+    nuxgrief.interact.chests:
+        description: Let the player open chests
+        default: op
+    nuxgrief.interact.furnaces:
+        description: Let the player open furnaces
+        default: op
+    nuxgrief.interact.storage_minecarts:
+        description: Let the player open minechests
+        default: op
