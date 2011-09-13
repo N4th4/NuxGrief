@@ -11,9 +11,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class NuxGrief extends JavaPlugin {
     private final NGPlayerListener playerListener = new NGPlayerListener(this);
     private final NGEntityListener entityListener = new NGEntityListener(this);
-    public final Logger            log            = this.getServer().getLogger();
+    public Logger                  log;
 
     public void onEnable() {
+        log = this.getServer().getLogger();
+
         PluginManager pm = getServer().getPluginManager();
         pm.registerEvent(Event.Type.PLAYER_PICKUP_ITEM, playerListener, Priority.Normal, this);
         pm.registerEvent(Event.Type.PLAYER_INTERACT, playerListener, Priority.Normal, this);
