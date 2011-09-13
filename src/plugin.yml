@@ -8,6 +8,7 @@ permissions:
         description: Let the player do anything he wants
         children:
             nuxgrief.gettargeted: true
+            nuxgrief.damage: true
             nuxgrief.pickup: true
             nuxgrief.interact.*: true
     nuxgrief.interact.*:
@@ -18,6 +19,9 @@ permissions:
             nuxgrief.interact.storage_minecarts: true
     nuxgrief.gettargeted:
         description: Let the player be targeted by a mob
+        default: op
+    nuxgrief.damage:
+        description: Let the player damage others players/mobs
         default: op
     nuxgrief.pickup:
         description: Let the player pick up items
