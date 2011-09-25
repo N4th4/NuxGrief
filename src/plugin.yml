@@ -1,5 +1,5 @@
 name: NuxGrief
-version: 1.2
+version: 1.3
 author: N4th4
 main: net.n4th4.bukkit.nuxgrief.NuxGrief
 
@@ -7,7 +7,7 @@ permissions:
     nuxgrief.*:
         description: Let the player do anything he wants
         children:
-            nuxgrief.gettargeted: true
+            nuxgrief.gettargeted.*: true
             nuxgrief.damage: true
             nuxgrief.pickup: true
             nuxgrief.interact.*: true
@@ -17,9 +17,26 @@ permissions:
             nuxgrief.interact.chests: true
             nuxgrief.interact.furnaces: true
             nuxgrief.interact.storage_minecarts: true
-    nuxgrief.gettargeted:
-        description: Let the player be targeted by a mob
-        default: op
+    nuxgrief.gettargeted.*:
+        description: Let the player be targeted by all mobs
+        children:
+                nuxgrief.gettargeted.cavespider: true
+                nuxgrief.gettargeted.chicken: true
+                nuxgrief.gettargeted.cow: true
+                nuxgrief.gettargeted.creeper: true
+                nuxgrief.gettargeted.enderman: true
+                nuxgrief.gettargeted.ghast: true
+                nuxgrief.gettargeted.giant: true
+                nuxgrief.gettargeted.monster: true
+                nuxgrief.gettargeted.pig: true
+                nuxgrief.gettargeted.pigzombie: true
+                nuxgrief.gettargeted.sheep: true
+                nuxgrief.gettargeted.silverfish: true
+                nuxgrief.gettargeted.skeleton: true
+                nuxgrief.gettargeted.spider: true
+                nuxgrief.gettargeted.squid: true
+                nuxgrief.gettargeted.wolf: true
+                nuxgrief.gettargeted.zombie: true
     nuxgrief.damage:
         description: Let the player damage others players/mobs
         default: op
@@ -34,4 +51,55 @@ permissions:
         default: op
     nuxgrief.interact.storage_minecarts:
         description: Let the player open minechests
+        default: op
+    nuxgrief.gettargeted.cavespider:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.chicken:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.cow:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.creeper:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.enderman:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.ghast:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.giant:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.monster:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.pig:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.pigzombie:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.sheep:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.silverfish:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.skeleton:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.spider:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.squid:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.wolf:
+        description: Let the player be targeted by the mob
+        default: op
+    nuxgrief.gettargeted.zombie:
+        description: Let the player be targeted by the mob
         default: op

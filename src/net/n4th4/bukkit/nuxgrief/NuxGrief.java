@@ -21,6 +21,8 @@ public class NuxGrief extends JavaPlugin {
         pm.registerEvent(Event.Type.PLAYER_INTERACT, playerListener, Priority.Normal, this);
         pm.registerEvent(Event.Type.ENTITY_TARGET, entityListener, Priority.Normal, this);
         pm.registerEvent(Event.Type.ENTITY_DAMAGE, entityListener, Priority.Normal, this);
+        pm.registerEvent(Event.Type.ENDERMAN_PICKUP, entityListener, Priority.Normal, this);
+        pm.registerEvent(Event.Type.ENDERMAN_PLACE, entityListener, Priority.Normal, this);
 
         PluginDescriptionFile pdfFile = this.getDescription();
         log.info("[NuxGrief] " + pdfFile.getName() + " version " + pdfFile.getVersion() + " is enabled!");
